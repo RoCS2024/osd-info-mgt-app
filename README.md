@@ -1,1 +1,0 @@
-"# osd-info-mgt-app" 
