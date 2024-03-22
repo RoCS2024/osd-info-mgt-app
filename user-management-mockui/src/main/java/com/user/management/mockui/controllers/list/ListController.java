@@ -1,45 +1,55 @@
-package com.user.management.mockui.controllers.main;
+package com.user.management.mockui.controllers.list;
 
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
-
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class ListController implements Initializable {
 
-
-public class MainController  {
     private Stage stage;
     private Scene scene;
-    private Parent root;
-
-
 
     @FXML
-    private TextField passwordShown;
+    private TableView<UserInfo> table;
+
     @FXML
-    private PasswordField passwordField;
+    private TableColumn<UserInfo, String> name;
     @FXML
-    private ToggleButton toggleButton;
+    private TableColumn<UserInfo, String> username;
     @FXML
-    void changeVisibility(ActionEvent event){
-        if(toggleButton.isSelected()){
-            passwordShown.setText(passwordField.getText());
-            passwordShown.setVisible(true);
-            passwordField.setVisible(false);
-            return;
-        }
-        passwordField.setText(passwordShown.getText());
-        passwordField.setVisible(true);
-        passwordShown.setVisible(false);
+    private TableColumn<UserInfo, String> role;
+
+    @FXML
+    private TableColumn<UserInfo, String> userid;
+
+    ObservableList<UserInfo> list = FXCollections.<UserInfo>observableArrayList(
+            new UserInfo("David", "Mr.pogi", "admin", "CT19-0001"),
+            new UserInfo("Sol", "Chicks", "moderator", "CT20-0001")
+    );
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        role.setCellValueFactory(new PropertyValueFactory<>("role"));
+        userid.setCellValueFactory(new PropertyValueFactory<>("userid"));
+
+        table.setItems(list);
     }
 
     public void logButtonOnAction(ActionEvent event) throws IOException {
@@ -89,12 +99,4 @@ public class MainController  {
         stage.setScene(scene);
         stage.show();
     }
-
-
 }
-
-
-
-
-
-
