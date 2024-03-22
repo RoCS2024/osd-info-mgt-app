@@ -3,10 +3,11 @@ package com.mock.employee.app;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
 
     public static void main(String[] args) {
         launch(args);
@@ -15,14 +16,14 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //use FXMLLoaded to load the fxml file in the resources/views
-        FXMLLoader loader = new FXMLLoader();
+        FXMLLoader loaders = new FXMLLoader();
 
         //set the location of the file
-        loader.setLocation(getClass().getResource("/views/MainView.fxml"));
+        loaders.setLocation(getClass().getResource("/views/DashboardView.fxml"));
 
         //create a layout and load the loader in the layout
-        AnchorPane mainLayout = new AnchorPane();
-        mainLayout = loader.load();
+        BorderPane mainLayout = new BorderPane();
+        mainLayout = loaders.load();
 
         //Create a scene using the layout
         Scene scene = new Scene(mainLayout);
@@ -31,5 +32,5 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
 }
+
