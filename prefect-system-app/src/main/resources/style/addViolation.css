@@ -1,0 +1,11 @@
+.button-1{
+    -fx-background-color: red;
+    -fx-background-radius: 10px;
+}
+
+.button-2{
+    -fx-background-color: green;
+    -fx-background-radius: 10px;
+}
+
+
