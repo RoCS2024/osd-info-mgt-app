@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.video.rental.app</groupId>
-    <artifactId>video-rental-app</artifactId>
+    <artifactId>student-information-mock</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>video-rental-app</name>
 

@@ -1,124 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.DatePicker?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="630.0" prefWidth="728.0" fx:controller="com.student.information.mock.controllers.main.MainController">
-    <children>
-        <HBox layoutX="91.0" prefHeight="66.0" prefWidth="638.0" style="-fx-background-color: #007BDB;">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="524.0" prefWidth="779.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.information.mock.controllers.main.MainController">
+    <top>
+        <HBox prefHeight="58.0" prefWidth="725.0" style="-fx-background-color: #007BDB;" BorderPane.alignment="CENTER">
             <children>
-                <Button style="-fx-background-color: transparent;" fx:id="logoButton">
-                    <graphic>
-                        <ImageView fitHeight="70.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@loge_new.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
+                <ImageView fitHeight="80.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@loge_new.png" />
+                    </image>
+                </ImageView>
             </children>
+            <BorderPane.margin>
+                <Insets left="54.0" />
+            </BorderPane.margin>
         </HBox>
-        <VBox prefHeight="630.0" prefWidth="93.0" style="-fx-background-color: darkblue;">
+    </top>
+    <left>
+        <VBox prefHeight="545.0" prefWidth="55.0" style="-fx-background-color: #00214A;" BorderPane.alignment="CENTER">
             <children>
-                <Button style="-fx-background-color: transparent;" fx:id="burgerButton">
-                    <graphic>
-                        <ImageView fitHeight="53.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@burger.png" />
                             </image>
                         </ImageView>
-                    </graphic>
-                </Button>
-
-                <Button style="-fx-background-color: transparent;" fx:id="userButton" onAction="#handleUpdateButtonAction">
-                    <graphic>
-                        <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" onMouseClicked="#handleAddButtonAction">
                             <image>
-                                <Image url="@user.png" />
+                                <Image url="@userList.png" />
                             </image>
                         </ImageView>
-                    </graphic>
-                </Button>
-
-                <Button style="-fx-background-color: transparent;" fx:id="listButton" onAction="#handleListButtonAction">
-                    <graphic>
-                        <ImageView fitHeight="105.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hover;" onMouseClicked="#handleListButtonAction">
                             <image>
-                                <Image url="@list.png" />
+                                <Image url="@studentList.png" />
                             </image>
                         </ImageView>
-                    </graphic>
-                </Button>
-
-                <Button style="-fx-background-color: transparent;" fx:id="infoButton" onAction="#handleAddButtonAction">
-                    <graphic>
-                        <ImageView fitHeight="93.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@info.png" />
+                                <Image url="@employeeList.png" />
                             </image>
                         </ImageView>
-                    </graphic>
-                </Button>
-
-                <Button style="-fx-background-color: transparent;" fx:id="settingButton">
-                    <graphic>
-                        <ImageView fitHeight="116.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@setting.png" />
+                                <Image url="@violationList.png" />
                             </image>
                         </ImageView>
-                    </graphic>
-                </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@offenseList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@csHistoryList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
             </children>
+            <BorderPane.margin>
+                <Insets top="-58.0" />
+            </BorderPane.margin>
         </VBox>
-        <TextField layoutX="111.0" layoutY="145.0" prefWidth="200"/>
-        <Text layoutX="111.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Student ID:" />
-        <TextField layoutX="111.0" layoutY="216.0" prefWidth="200"/>
-        <Text layoutX="111.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Last Name:" />
-        <TextField layoutX="308.0" layoutY="216.0" prefWidth="200"/>
-        <Text layoutX="308.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="First Name:" />
-        <TextField layoutX="502.0" layoutY="216.0" prefWidth="200"/>
-        <Text layoutX="500.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Middle Name:" />
-        <ComboBox layoutX="111.0" layoutY="289.0" prefWidth="200">
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Male" />
-                    <String fx:value="Female" />
-                </FXCollections>
-            </items>
-        </ComboBox>
-        <Text layoutX="111.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Sex:" />
-        <DatePicker layoutX="308.0" layoutY="289.0" prefWidth="200"/>
-        <Text layoutX="308.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Birthday:" />
-        <ComboBox layoutX="502.0" layoutY="289.0" prefWidth="200">
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Christianity" />
-                    <String fx:value="Born Again" />
-                    <String fx:value="Iglesia Ni Cristo" />
-                    <String fx:value="Buddhism" />
-                </FXCollections>
-            </items>
-        </ComboBox>
-        <Text layoutX="502.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Religion:" />
-        <TextField layoutX="111.0" layoutY="364.0" />
-        <Text layoutX="111.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Email:" />
-        <TextField layoutX="321.0" layoutY="364.0" />
-        <Text layoutX="321.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Contact No:" />
-        <TextField layoutX="111.0" layoutY="438.0" prefHeight="26.0" prefWidth="588.0" />
-        <Text layoutX="111.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Address" />
-        <Button layoutX="227.0" layoutY="525.0" mnemonicParsing="false" text="Add" style="-fx-background-color: white; -fx-border-color: #007BDB; -fx-text-fill: #007BDB; -fx-border-radius: 30; -fx-background-radius: 30;" prefWidth="300" prefHeight="50"/>
-        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="325.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
-    </children>
-</AnchorPane>
+    </left>
+    <center>
+        <BorderPane prefHeight="430.0" prefWidth="700.0" style="-fx-background-color: #DCDCDC;" BorderPane.alignment="CENTER">
+            <center>
+                <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="396.0" prefWidth="584.0" styleClass="grid-pane">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="34.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="235.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="48.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="253.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="26.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="280.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="45.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="34.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="26.0" prefHeight="44.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="22.0" prefHeight="31.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="26.0" prefHeight="44.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="33.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="23.0" prefHeight="40.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="28.0" prefHeight="34.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="38.0" prefHeight="47.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="26.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="5.0" prefHeight="73.0" />
+                    </rowConstraints>
+                    <children>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Student ID:" wrappingWidth="165.65966796875" GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Last Name:" wrappingWidth="164.11767578125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Middle Name:" wrappingWidth="247.22265625" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Sex:" wrappingWidth="166.94970703125" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField prefHeight="31.0" prefWidth="172.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Birthday:" wrappingWidth="201.9931640625" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Religion:" wrappingWidth="242.07763671875" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Email:" wrappingWidth="162.6572265625" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Contact No:" wrappingWidth="218.662109375" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <TextField prefHeight="31.0" prefWidth="431.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Address" wrappingWidth="168.1298828125" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="107.0" text="Add" styleClass="add" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Last Name:" wrappingWidth="209.11767578125" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="107.0" text="Cancel" styleClass="cancel" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </BorderPane.margin>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>

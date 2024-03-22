@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -21,12 +22,12 @@ public class Main extends Application {
         loader.setLocation(getClass().getResource("/views/MainView.fxml"));
 
         //create a layout and load the loader in the layout
-        AnchorPane mainLayout = new AnchorPane();
+        BorderPane mainLayout = new BorderPane();
         mainLayout = loader.load();
 
         //Create a scene using the layout
         Scene scene = new Scene(mainLayout);
-
+        scene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
         //set the scene and show the stage
         stage.setScene(scene);
         stage.show();
