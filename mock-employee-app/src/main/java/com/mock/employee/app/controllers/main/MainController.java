@@ -1,7 +1,5 @@
 package com.mock.employee.app.controllers.main;
 
-
-import  javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,7 +11,31 @@ import javafx.stage.Stage;
 public class MainController {
 
     @FXML
-    protected void handleListButtonAction(ActionEvent event) {
+    protected void handleaddButtonAction(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/MainView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void handleUpdateButtonAction(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/UpdateView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void handleListButtonAction(javafx.event.ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/DashboardView.fxml"));
             Parent root = loader.load();
@@ -38,8 +60,5 @@ public class MainController {
             e.printStackTrace();
         }
     }
-
-
-
 
 }
