@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="524.0" prefWidth="779.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.information.mock.controllers.main.MainController">
+    <top>
+        <HBox prefHeight="58.0" prefWidth="725.0" style="-fx-background-color: #007BDB;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="80.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@loge_new.png" />
+                    </image>
+                </ImageView>
+            </children>
+            <BorderPane.margin>
+                <Insets left="54.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="545.0" prefWidth="55.0" style="-fx-background-color: #00214A;" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@burger.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" onMouseClicked="#handleAddButtonAction">
+                            <image>
+                                <Image url="@userList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hover;" onMouseClicked="#handleListButtonAction">
+                            <image>
+                                <Image url="@studentList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@employeeList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@violationList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@offenseList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+                <BorderPane styleClass="borderpane">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <center>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@csHistoryList.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                </BorderPane>
+            </children>
+            <BorderPane.margin>
+                <Insets top="-58.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <center>
+        <BorderPane prefHeight="430.0" prefWidth="700.0" style="-fx-background-color: #DCDCDC;" BorderPane.alignment="CENTER">
+            <center>
+                <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="396.0" prefWidth="584.0" styleClass="grid-pane">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="34.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="235.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="48.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="253.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="26.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="280.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="45.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="34.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="26.0" prefHeight="44.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="22.0" prefHeight="31.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="26.0" prefHeight="44.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="33.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="23.0" prefHeight="40.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="28.0" prefHeight="34.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="38.0" prefHeight="47.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="26.0" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="5.0" prefHeight="73.0" />
+                    </rowConstraints>
+                    <children>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Student ID:" wrappingWidth="165.65966796875" GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Last Name:" wrappingWidth="164.11767578125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Middle Name:" wrappingWidth="247.22265625" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Sex:" wrappingWidth="166.94970703125" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField prefHeight="31.0" prefWidth="172.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Birthday:" wrappingWidth="201.9931640625" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Religion:" wrappingWidth="242.07763671875" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Email:" wrappingWidth="162.6572265625" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Contact No:" wrappingWidth="218.662109375" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <TextField prefHeight="31.0" prefWidth="431.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Address" wrappingWidth="168.1298828125" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="107.0" text="Add" styleClass="add" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Last Name:" wrappingWidth="209.11767578125" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="107.0" text="Cancel" styleClass="cancel" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </BorderPane.margin>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
