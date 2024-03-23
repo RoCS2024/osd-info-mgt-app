@@ -1,0 +1,14 @@
+.button{
+    -fx-background-color: #404eef;
+    -fx-background-radius: 10px;
+}
+
+.rounded-anchor-pane {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: white;
+}
+
+
+
+
