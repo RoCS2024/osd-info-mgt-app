@@ -17,7 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -65,7 +64,7 @@ public class ListController implements Initializable {
 
             Stage dashboardStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/views/ListView.fxml"));
+            loader.setLocation(getClass().getResource("/views/ListViewTry.fxml"));
             BorderPane root = loader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
@@ -83,7 +82,7 @@ public class ListController implements Initializable {
 
             Stage dashboardStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/views/MainView.fxml"));
+            loader.setLocation(getClass().getResource("/views/addStudent.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
@@ -93,9 +92,22 @@ public class ListController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    protected void handleIconUserList(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/UserList.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     ObservableList<Student> list = FXCollections.observableArrayList(
-            new Student("CT21-0143", "Magnaye, Justine Dave R.", "edit"),
-            new Student("CT21-0144", "Digo, Joven G.", "edit")
+            new Student("CT21-0001", "Dinglasan Harold", "edit"),
+            new Student("CT21-0002", "Dinglasan Ian Dave", "edit")
     );
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -103,15 +115,15 @@ public class ListController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         action.setCellValueFactory(new PropertyValueFactory<>("action"));
 
-        // Custom cell factory to display an image in the action column
+
         action.setCellFactory(column -> {
             return new TableCell<Student, String>() {
                 final ImageView imageView = new ImageView();
                 final Image editImage = new Image(getClass().getResourceAsStream("/views/edit.png"));
 
                 {
-                    imageView.setFitWidth(30);
-                    imageView.setFitHeight(30);
+                    imageView.setFitWidth(25);
+                    imageView.setFitHeight(25);
                 }
 
                 @Override
