@@ -1,0 +1,17 @@
+.button-1{
+    -fx-background-color: #FF0000;
+    -fx-background-radius: 20px;
+}
+
+.button-2{
+    -fx-background-color: #009922;
+    -fx-background-radius: 20px;
+}
+
+.rounded-grid-pane {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: white;
+}
+
+

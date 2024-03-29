@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #00214A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prefect.user.management.app.controllers.main.MainController">
+    <left>
+        <ImageView blendMode="SRC_ATOP" fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+            <image>
+                <Image url="@../images/loge_new.png" />
+            </image>
+            <BorderPane.margin>
+                <Insets left="10.0" top="10.0" />
+            </BorderPane.margin>
+        </ImageView>
+    </left>
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="90.0" right="210.0" top="100.0" />
+            </BorderPane.margin>
+            <children>
+                <Text layoutX="13.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in with your Account" textAlignment="JUSTIFY" textOrigin="CENTER" wrappingWidth="225.9999771118164" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="userID" layoutX="18.0" layoutY="71.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="190.0" promptText="Username" style="-fx-background-radius: 8;" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="71.0" />
+                <TextField fx:id="passwordShown" layoutX="7.0" layoutY="131.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="190.0" promptText="passwordShown" style="-fx-background-radius: 8;" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="131.0" />
+                <PasswordField fx:id="passwordField" layoutX="7.0" layoutY="131.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="190.0" promptText="Password" style="-fx-background-radius: 7;" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="131.0" />
+                <Hyperlink onMouseClicked="#handleForgotPsw" layoutX="15.0" layoutY="170.0" prefHeight="13.0" prefWidth="108.0" text="Forgot Password?" textFill="#007bdb">
+               <font>
+                  <Font size="10.0" />
+               </font></Hyperlink>
+                <ToggleButton fx:id="toggleButton" layoutX="195.0" layoutY="137.0" mnemonicParsing="false" onAction="#changeVisibility" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="25.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView accessibleRole="TOGGLE_BUTTON" fitHeight="19.0" fitWidth="115.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/view.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
+                <Button fx:id="logButton" layoutX="86.0" layoutY="208.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logButtonOnAction" prefHeight="30.0" prefWidth="75.0" style="-fx-background-radius: 15px; -fx-background-color: #007BDB; -fx-border-radius: 15px;" text="LOG IN" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="88.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: #DDF0FF;" BorderPane.alignment="BOTTOM_CENTER">
+            <children>
+                <ImageView accessibleRole="PARENT" fitHeight="176.0" fitWidth="180.0" layoutX="31.0" layoutY="88.0" nodeOrientation="INHERIT" pickOnBounds="true" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="88.0">
+                    <image>
+                        <Image url="@../images/deus22.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#00214a" layoutX="33.0" layoutY="281.0" strokeType="INSIDE" strokeWidth="0.0" text="No Account? Create One." textAlignment="CENTER" wrappingWidth="172.0" AnchorPane.bottomAnchor="216.033203125" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Text>
+                <Button fx:id="signButton" defaultButton="true" layoutX="58.0" layoutY="283.0" mnemonicParsing="false" onAction="#signButtonOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: none; -fx-background-radius: 15px; -fx-font-weight: 800;" stylesheets="@../styles/main.css" text="SIGN UP" textFill="#007bdb" underline="true" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="58.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
