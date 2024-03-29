@@ -1,0 +1,19 @@
+.button-1{
+    -fx-background-color:  #007BDB;
+    -fx-background-radius: 10px;
+    -fx-background-radius: 20px;
+}
+
+.button-2{
+    -fx-background-color: #009922;
+    -fx-background-radius: 10px;
+    -fx-background-radius: 20px;
+}
+
+.imageView {
+    -fx-background-color: #00214A;
+}
+
+.imageView:hover {
+    -fx-background-color: #00397F;
+}
